@@ -1,33 +1,20 @@
-# week1
-항해99 node.js 주특기 입문주차 과제
+# week5
+항해99 node.js 주특기 숙련주차 과제
 
 **과제목표**
 
-◎ 게시글
-- 게시글 목록조회
-- 게시글 상세조회
--  게시글 작성
--  게시글 수정
--  게시글 삭제
+1.. 프로젝트 ERD 작성
 
-◎ 댓글
--  댓글조회
--  게시글 작성
--  게시글 수정
--  게시글 삭제
+2.. Mongo DB로 연결되어 있던 과제를 MySQL로 변경
 
+3.. API 구현
 
-**Directory Structure**
-.
-├── app.js
-├── routes
-│   ├── index.js
-│   ├── comments.js
-│   └── posts.js
-└── schemas
-    ├── index.js
-    ├── comment.js
-    └── post.js
+ - 회원가입
+ - 로그인
+ - 게시글 - 작성, 조회, 상세조회, 수정, 삭제
+ - 댓글 - 작성, 조회, 수정, 삭제
+ - 좋아요 - 좋아요 등록 및 취소, 좋아요 글 조회
+
     
-    
-![](https://i.imgur.com/j5x5YmH.png)
+*확대해서 봐주세요!
+![](https://i.imgur.com/TS9oSiM.png)
