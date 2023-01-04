@@ -6,6 +6,7 @@ const { Op } = require("sequelize");
 const cookieParser = require('cookie-parser')
 const jwt = require("jsonwebtoken");
 const bcrypt = require('bcrypt');
+require("dotenv").config();
 
 
 router.use(cookieParser());
@@ -110,7 +111,7 @@ router.post('/login',async(req,res)=> {
     })
   }
   
-  const token = jwt.sign({ userId: user.userId }, "sparta-secret-key")
+  const token = jwt.sign({ userId: user.userId }, process.env.JWT_KEY)
   res.cookie('Authorization', `Bearer ${token}`);
   return res.send({
     token: token,

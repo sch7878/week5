@@ -4,6 +4,7 @@ const router = express.Router();
 const cookieParser = require('cookie-parser')
 const {Users} = require("../models");
 router.use(cookieParser());
+require("dotenv").config();
 
 module.exports = router.use (async(req, res, next) => {
     const {Authorization} = req.cookies;
@@ -21,7 +22,7 @@ module.exports = router.use (async(req, res, next) => {
     }
   
     try {
-      const {userId} = jwt.verify(authToken, "sparta-secret-key");
+      const {userId} = jwt.verify(authToken, process.env.JWT_KEY );
       await Users.findOne({where : {userId}}).then((user) => {
         res.locals.user = user;
        next();
