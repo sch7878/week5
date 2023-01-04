@@ -111,7 +111,7 @@ router.post('/login',async(req,res)=> {
     })
   }
   
-  const token = jwt.sign({ userId: user.userId }, process.env.JWT_KEY)
+  const token = jwt.sign({ userId: user.userId }, JWT_KEY)
   res.cookie('Authorization', `Bearer ${token}`);
   return res.send({
     token: token,

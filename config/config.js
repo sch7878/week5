@@ -1,15 +1,22 @@
-
 require("dotenv").config();
 module.exports =
 {
   "development": {
-    "username": process.env.config_USERNAME,
-    "password": process.env.config_PASSWORD,
-    "database": process.env.config_DATABASE,
-    "host": process.env.config_HOST,
-    "dialect": process.env.config_DIALECT,
-    "timezone" : "+9:00"
-  },
+    "username": "config_USERNAME",
+    "password": "config_PASSWORD",
+    "database": "config_DATABASE",
+    "host": "config_HOST",
+    "dialect": "config_DIALECT",
+    "timezone" : "+09:00"
+    },
+
+    // "username": process.env.config_USERNAME,
+    // "password": process.env.config_PASSWORD,
+    // "database": process.env.config_DATABASE,
+    // "host": process.env.config_HOST,
+    // "dialect": process.env.config_DIALECT,
+    
+  
   "test": {
     "username": "root",
     "password": null,
